@@ -1,5 +1,7 @@
 ---
+import '../styles/global.css'
 
+import Welcome from "../windows/welcome.astro";
 ---
 
 <html lang="en">
@@ -8,9 +10,9 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>hex4</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-amber-500">
+		<Welcome class=""/>
 	</body>
 </html>
