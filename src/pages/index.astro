@@ -2,6 +2,8 @@
 import '../styles/global.css'
 
 import Welcome from "../windows/welcome.astro";
+
+import Wallpaper from '../assets/blob-scene-haikei.svg';
 ---
 
 <html lang="en">
@@ -12,7 +14,8 @@ import Welcome from "../windows/welcome.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>hex4</title>
 	</head>
-	<body class="bg-amber-500">
+	<body class="bg-ctp-crust overflow-hidden">
+        <Wallpaper class="-z-20 absolute"></Wallpaper>
 		<Welcome class=""/>
 	</body>
 </html>

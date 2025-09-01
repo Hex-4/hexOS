@@ -2,9 +2,18 @@
 import '../styles/global.css'
 ---
 
-<div class="w-fit rounded-md border border-slate-500 window absolute">
-    <div class="text-amber-50 bg-slate-700/50 text-center w-full py-1 rounded-t-md handle">Window</div>
-    <div class="p-5 bg-slate-800/80 rounded-b-md">
+<div class="w-fit rounded-2xl  window absolute transition-colors duration-300 flex flex-row">
+    <div class="text-ctp-text bg-ctp-mantle text-center font-vt text-xl rounded-l-xl pr-3 translate-x-10 hover:translate-x-4 transition-all border-ctp-overlay0 hover:border-ctp-peach border-1 ease-out duration-300">
+        <div class="w-min flex flex-col justify-between items-center py-2 px-1 h-full">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/welcome" class="size-6">
+
+            <span class="text-vertical text-3xl">Welcome!</span>
+
+            <img src="https://icons.hackclub.com/api/icons/0xed8796/view-close-small" class="size-6 hover:size-7 transition-all">
+        </div>
+
+    </div>
+    <div class="z-20 p-5 bg-ctp-base rounded-xl border-ctp-subtext0 border-2">
         <slot />
     </div>
 
