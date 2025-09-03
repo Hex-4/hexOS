@@ -3,7 +3,8 @@ import '../styles/global.css'
 
 import Welcome from "../windows/welcome.astro";
 
-import Wallpaper from '../assets/blob-scene-haikei.svg';
+import Wallpaper from "../assets/blob-scene-haikei.png";
+import Bar from "../bar.astro";
 ---
 
 <html lang="en">
@@ -15,7 +16,8 @@ import Wallpaper from '../assets/blob-scene-haikei.svg';
 		<title>hex4</title>
 	</head>
 	<body class="bg-ctp-crust overflow-hidden">
-        <Wallpaper class="-z-20 absolute"></Wallpaper>
+        <img src={Wallpaper.src} class="-z-20 absolute w-screen h-screen object-cover"></img>
+        <Bar></Bar>
 		<Welcome class=""/>
 	</body>
 </html>
