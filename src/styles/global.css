@@ -15,3 +15,20 @@
     --font-pixel: "Silkscreen", sans-serif;
     --font-vt: "VT323", sans-serif;
 }
+
+.app:hover img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.app:has(+ .app:hover) img,
+.app:hover + .app img {
+    width: 7rem;
+    height: 7rem;
+}
+
+.app:has(+ .app + .app:hover) img,
+.app:hover + .app + .app img{
+    width: 6rem;
+    height: 6rem;
+}

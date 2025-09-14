@@ -5,6 +5,7 @@ import Welcome from "../windows/welcome.astro";
 
 import Wallpaper from "../assets/blob-scene-haikei.png";
 import Bar from "../bar.astro";
+import Launcher from "../launcher.astro";
 ---
 
 <html lang="en">
@@ -15,9 +16,10 @@ import Bar from "../bar.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>hex4</title>
 	</head>
-	<body class="bg-ctp-crust overflow-hidden">
+	<body class="bg-ctp-crust overflow-hidden desktop">
         <img src={Wallpaper.src} class="-z-20 absolute w-screen h-screen object-cover"></img>
         <Bar></Bar>
+        <Launcher/>
 		<Welcome class=""/>
 	</body>
 </html>
