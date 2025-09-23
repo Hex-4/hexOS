@@ -16,19 +16,11 @@
     --font-vt: "VT323", sans-serif;
 }
 
-.app:hover img {
-    width: 8rem;
-    height: 8rem;
+.ease-spring {
+    @apply ease-[linear(0,0.039_2%,0.155_4.2%,0.986_15.2%,1.133_18.6%,1.201_22%,1.193_26.8%,1.011_38.4%,0.959_45.4%,1.008_68.6%,1)];
 }
 
-.app:has(+ .app:hover) img,
-.app:hover + .app img {
-    width: 7rem;
-    height: 7rem;
+.closed {
+    @apply opacity-0! scale-0!;
 }
 
-.app:has(+ .app + .app:hover) img,
-.app:hover + .app + .app img{
-    width: 6rem;
-    height: 6rem;
-}

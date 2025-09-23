@@ -2,27 +2,88 @@
 import './styles/global.css'
 ---
 
-<div class="z-200 p-7 bg-ctp-base rounded-xl border-ctp-subtext0 border-2 absolute top-1/2 left-1/2 -translate-1/2 flex flex-row ">
+<style>
+    .app:hover img {
+        width: 8rem;
+        height: 8rem;
+    }
 
-    <div class="flex items-center justify-center flex-col group app">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
-             class="size-24 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
-             class="size-24 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
-             class="size-24 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
-             class="size-24 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
-    </div>
+    .app:has(+ .app:hover) img,
+    .app:hover + .app img {
+        width: 7rem;
+        height: 7rem;
+    }
 
+    .app:has(+ .app + .app:hover) img,
+    .app:hover + .app + .app img{
+        width: 6rem;
+        height: 6rem;
+    }
+
+
+</style>
+
+<div class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 flex flex-row transition-all duration-800" id="launcher" popover>
+    <div class="flex items-center justify-center flex-col group app" id="launch-about">
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+             class="size-24 transition-all duration-500 ease-spring">
+        <p class="text-ctp-text text-2xl font-vt">about me</p>
+    </div>
+    <div class="flex items-center justify-center flex-col group app">
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+             class="size-24 transition-all duration-500 ease-spring">
+        <p class="text-ctp-text text-2xl font-vt">about me</p>
+    </div>
+    <div class="flex items-center justify-center flex-col group app">
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+             class="size-24 transition-all duration-500 ease-spring">
+        <p class="text-ctp-text text-2xl font-vt">about me</p>
+    </div>
 </div>
+
+<script>
+
+    import hotkeys from 'hotkeys-js';
+
+    hotkeys('ctrl+space', function(event, handler){
+        // Prevent the default refresh event under WINDOWS system
+        event.preventDefault()
+        openLauncher()
+    });
+
+    for (const div of document.getElementsByClassName("app")) {
+        div.addEventListener("click", function(event){
+            event.preventDefault()
+            console.log("launching...")
+            if (event.currentTarget.id == "launch-about") {
+                console.log("about!")
+                document.getElementById("about").classList.toggle("closed")
+            }
+        })
+    }
+
+
+    var launcher = document.getElementById('launcher');
+
+    launcher.addEventListener("beforetoggle", (e) => {
+        if (e.newState === "closed") {
+            launcher?.classList.replace("ease-spring", "ease-out")
+            launcher?.classList.replace("duration-800", "duration-300")
+        } else {
+            launcher?.classList.replace("ease-out", "ease-spring")
+            launcher?.classList.replace("duration-300", "duration-800")
+        }
+    });
+
+    launcher?.addEventListener("openLauncher", () => {
+        console.log("hi")
+        openLauncher()
+    })
+
+
+
+    function openLauncher() {
+        launcher?.showPopover()
+    }
+
+</script>

@@ -1,15 +1,18 @@
 ---
 import '../styles/global.css'
+import { Debug } from 'astro:components';
+
+const { id = "welcome", title = "Welcome!", icon = "https://icons.hackclub.com/api/icons/0xfab387/welcome", closed = ""} = Astro.props;
 ---
 
-<div class="w-fit rounded-2xl  window absolute transition-colors duration-300 flex flex-row">
-    <div class="handle text-ctp-text bg-ctp-mantle text-center font-vt text-xl rounded-l-xl pr-3 translate-x-10 hover:translate-x-4 transition-all border-ctp-overlay0 hover:border-ctp-peach border-1 ease-out duration-250">
+<div class={`w-fit rounded-2xl  window absolute transition-all duration-300 flex flex-row ${closed === "true" ? "closed" : ""}`} id={id}>
+    <div class="handle text-ctp-text bg-ctp-mantle text-center translate-x-10 hover:translate-x-4  font-vt text-xl rounded-l-xl pr-3 transition-all border-ctp-overlay0 hover:border-ctp-peach! border-1 ease-spring duration-400">
         <div class="w-min flex flex-col justify-between items-center py-2 px-1 h-full">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/welcome" class="size-6">
+            <img src={icon} class="size-6">
 
-            <span class="text-vertical text-3xl pointer-events-none">Welcome!</span>
+            <span class="text-vertical text-3xl pointer-events-none">{title}</span>
 
-            <img src="https://icons.hackclub.com/api/icons/0xed8796/view-close-small" class="size-6 hover:size-7 transition-all">
+            <img src="https://icons.hackclub.com/api/icons/0xed8796/view-close-small" class="size-6 hover:size-7 transition-all close">
         </div>
 
     </div>
@@ -34,47 +37,69 @@ import '../styles/global.css'
         var currentX = 0;
         var currentY = 0;
 
-        // Step 3: Check if there is a special header element associated with the draggable element.
-        if (element.querySelector(".handle")) {
-            // Step 4: If present, assign the `dragMouseDown` function to the header's `onmousedown` event.
-            // This allows you to drag the window around by its header.
-            element.querySelector(".handle")!.onmousedown = startDragging;
-        } else {
-            // Step 5: If not present, assign the function directly to the draggable element's `onmousedown` event.
-            // This allows you to drag the window by holding down anywhere on the window.
-            element.onmousedown = startDragging;
-        }
+        let posX = 0, posY = 0;
+
+
+
+
+        element.querySelector(".handle")!.addEventListener('mousedown', startDragging);
+
+        element.querySelector(".handle")!.addEventListener("mouseenter", () => {console.log("enter")});
+
+        element.querySelector(".handle")!.addEventListener("mouseleave", () => {console.log("leave")});
+
 
         // Step 6: Define the `startDragging` function to capture the initial mouse position and set up event listeners.
         function startDragging(e) {
             e = e || window.event;
+            element.style.transition = "none";
             e.preventDefault();
             // Step 7: Get the mouse cursor position at startup.
             initialX = e.clientX;
             initialY = e.clientY;
+
+
             // Step 8: Set up event listeners for mouse movement (`elementDrag`) and mouse button release (`closeDragElement`).
-            document.onmouseup = stopDragging;
-            document.onmousemove = dragElement;
+            document.addEventListener("mouseup", stopDragging);
+            document.addEventListener("mousemove", dragElement);
+
+
         }
 
         // Step 9: Define the `elementDrag` function to calculate the new position of the element based on mouse movement.
         function dragElement(e) {
+            console.log(document.elementFromPoint(e.clientX, e.clientY));
+
             e = e || window.event;
             e.preventDefault();
-            // Step 10: Calculate the new cursor position.
-            currentX = initialX - e.clientX;
-            currentY = initialY - e.clientY;
-            initialX = e.clientX;
-            initialY = e.clientY;
-            // Step 11: Update the element's new position by modifying its `top` and `left` CSS properties.
-            element.style.top = (element.offsetTop - currentY) + "px";
-            element.style.left = (element.offsetLeft - currentX) + "px";
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+            element.style.transform = `translate(${posX + currentX}px, ${posY + currentY}px)`;
         }
 
         // Step 12: Define the `stopDragging` function to stop tracking mouse movement by removing the event listeners.
         function stopDragging() {
-            document.onmouseup = null;
-            document.onmousemove = null;
+            element.style.transition = "all 300ms";
+            console.log("stopDragging");
+            document.removeEventListener("mouseup", stopDragging);
+            document.removeEventListener("mousemove", dragElement);
+
+            posX += currentX;
+            posY += currentY;
+
+            const handle = element.querySelector(".handle");
+            if (handle) {
+                // magic
+                handle.style.visibility = 'hidden';
+                handle.offsetHeight;
+                handle.style.visibility = '';
+            }
         }
+    }
+
+    for (const element of document.getElementsByClassName("close")) {
+        element.addEventListener("click", () => {
+            element.closest(".window")?.classList.toggle("closed");
+        })
     }
 </script>
