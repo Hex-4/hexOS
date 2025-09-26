@@ -23,21 +23,26 @@ import './styles/global.css'
 
 </style>
 
-<div class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 flex flex-row transition-all duration-800" id="launcher" popover>
+<div class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl pointer-events-none open:pointer-events-auto flex border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 flex-row transition-all duration-800" id="launcher" popover>
     <div class="flex items-center justify-center flex-col group app" id="launch-about">
         <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
              class="size-24 transition-all duration-500 ease-spring">
         <p class="text-ctp-text text-2xl font-vt">about me</p>
     </div>
-    <div class="flex items-center justify-center flex-col group app">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+    <div class="flex items-center justify-center flex-col group app" id="launch-links">
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/web"
              class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
+        <p class="text-ctp-text text-2xl font-vt">links</p>
     </div>
     <div class="flex items-center justify-center flex-col group app">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/idea"
              class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
+        <p class="text-ctp-text text-2xl font-vt">projects</p>
+    </div>
+    <div class="flex items-center justify-center flex-col group app">
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/explore"
+             class="size-24 transition-all duration-500 ease-spring">
+        <p class="text-ctp-text text-2xl font-vt">fun</p>
     </div>
 </div>
 
@@ -56,8 +61,9 @@ import './styles/global.css'
             event.preventDefault()
             console.log("launching...")
             if (event.currentTarget.id == "launch-about") {
-                console.log("about!")
                 document.getElementById("about").classList.toggle("closed")
+            } else if (event.currentTarget.id == "launch-links") {
+                document.getElementById("links").classList.toggle("closed")
             }
         })
     }

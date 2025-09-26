@@ -5,7 +5,7 @@ import { Debug } from 'astro:components';
 const { id = "welcome", title = "Welcome!", icon = "https://icons.hackclub.com/api/icons/0xfab387/welcome", closed = ""} = Astro.props;
 ---
 
-<div class={`w-fit rounded-2xl  window absolute transition-all duration-300 flex flex-row ${closed === "true" ? "closed" : ""}`} id={id}>
+<div class={`w-fit rounded-2xl window absolute translate-x-[calc(48vw-50%)] translate-y-[calc(42vh-50%)] transition-all duration-300 flex flex-row ${closed === "true" ? "closed" : ""}`} id={id}>
     <div class="handle text-ctp-text bg-ctp-mantle text-center translate-x-10 hover:translate-x-4  font-vt text-xl rounded-l-xl pr-3 transition-all border-ctp-overlay0 hover:border-ctp-peach! border-1 ease-spring duration-400">
         <div class="w-min flex flex-col justify-between items-center py-2 px-1 h-full">
             <img src={icon} class="size-6">

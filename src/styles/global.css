@@ -4,6 +4,8 @@
 
 @import "@catppuccin/tailwindcss/mocha.css";
 
+@source inline("{group-hover:,}text-ctp-{sapphire,}");
+
 .text-vertical {
     writing-mode: vertical-rl;
     text-orientation: sideways;
@@ -24,3 +26,6 @@
     @apply opacity-0! scale-0!;
 }
 
+.asdssds {
+    @apply text-ctp-sapphire;
+}
