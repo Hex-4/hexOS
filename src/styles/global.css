@@ -4,7 +4,7 @@
 
 @import "@catppuccin/tailwindcss/mocha.css";
 
-@source inline("{group-hover:,}text-ctp-{sapphire,}");
+@source inline("{group-hover:,}text-ctp-{sapphire,lavender,red,mauve,green,lime,yellow,old,purple}");
 
 .text-vertical {
     writing-mode: vertical-rl;

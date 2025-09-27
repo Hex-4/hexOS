@@ -34,7 +34,7 @@ import './styles/global.css'
              class="size-24 transition-all duration-500 ease-spring">
         <p class="text-ctp-text text-2xl font-vt">links</p>
     </div>
-    <div class="flex items-center justify-center flex-col group app">
+    <div class="flex items-center justify-center flex-col group app" id="launch-projects">
         <img src="https://icons.hackclub.com/api/icons/0xfab387/idea"
              class="size-24 transition-all duration-500 ease-spring">
         <p class="text-ctp-text text-2xl font-vt">projects</p>
@@ -64,6 +64,8 @@ import './styles/global.css'
                 document.getElementById("about").classList.toggle("closed")
             } else if (event.currentTarget.id == "launch-links") {
                 document.getElementById("links").classList.toggle("closed")
+            } else if (event.currentTarget.id == "launch-projects") {
+                document.getElementById("projects").classList.toggle("closed")
             }
         })
     }

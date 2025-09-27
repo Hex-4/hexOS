@@ -1,0 +1,30 @@
+---
+import "./styles/global.css"
+
+let {link = "https://hack.club", title = "Hack Club", status = "shipped"} = Astro.props;
+---
+<div class="group bg-ctp-surface0 rounded-lg p-4 transition-all ease-spring duration-500 justify-start text-left hover:-translate-y-2 shadow-lg hover:shadow-2xl">
+
+    <div class="flex flex-row items-center group">
+        <a href={link}
+           class="text-2xl underline decoration-wavy transition-all ease-spring underline-offset-2 hover:underline-offset-6 hover:font-bold hover:text-ctp-peach duration-500">{title}</a>
+        {status === "shipped" &&
+                <div class="ml-auto py-1 px-2 rounded-full bg-ctp-green text-ctp-base font-bold text-sm flex items-center align-middle gap-1">
+                    <img src=https://icons.hackclub.com/api/icons/0x303446/bolt
+                         class="size-6 transition-all ease-spring duration-500 inline">
+                    <span class="text-ctp-base font-bold text-sm">shipped</span>
+                </div>
+        }
+        {status === "dev" &&
+                <div class="ml-auto py-1 px-2 rounded-full border-dotted border-2 border-ctp-overlay0 text-ctp-base font-bold text-sm flex items-center align-middle gap-1">
+                    <img src=https://icons.hackclub.com/api/icons/0xc6d0f5/code
+                         class="size-6 transition-all ease-spring duration-500 inline">
+                    <span class="text-ctp-text font-bold text-sm">in dev</span>
+                </div>
+        }
+    </div>
+
+    <p class="text-ctp-text mt-2">
+        <slot/>
+    </p>
+</div>

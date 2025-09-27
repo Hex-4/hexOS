@@ -4,10 +4,52 @@ import Window from "../layouts/window.astro";
 import ListLink from "../listLink.astro";
 ---
 
-<Window closed="true" title="Links" id="links" icon="https://icons.hackclub.com/api/icons/0xfab387/web">
-    <div class=" text-center text-amber-50 font-mono flex flex-col">
-        <ListLink link="https://bsky.app/profile/hex4.xyz" title="bluesky" icon="https://icons.hackclub.com/api/icons/0x74c7ec/mention" info="microblogging!" color="sapphire">
-            <ListLink link="https://bsky.app/profile/hex4.xyz" title="github" icon="https://icons.hackclub.com/api/icons/0x74c7ec/mention" info="microblogging!" color="sapphire">
+<Window closed="true"
+        title="Links"
+        id="links"
+        icon="https://icons.hackclub.com/api/icons/0xfab387/web">
+    <div class=" text-center text-amber-50 font-mono flex flex-col gap-1.5">
+        <ListLink link="https://dimaverse.itch.io"
+                  title="itch.io"
+                  icon="https://icons.hackclub.com/api/icons/0xf38ba8/sticker"
+                  info="me and my friends' games!"
+                  color="red"></ListLink>
+        <ListLink
+                link="https://scrapbook.hackclub.com/hex4"
+                title="scrapbook"
+                icon="https://icons.hackclub.com/api/icons/0xe5c890/post-fill"
+                info="daily devlogs"
+                color="yellow"
+        />
+        <ListLink
+            link="mailto:hey@hex4.xyz?subject=&body=hi!"
+            title="email"
+            icon="https://icons.hackclub.com/api/icons/0xa6d189/email"
+            info="send me a message!"
+            color="green"
+        />
+        <ListLink link="https://bsky.app/profile/hex4.xyz"
+                  title="bluesky"
+                  icon="https://icons.hackclub.com/api/icons/0x74c7ec/mention"
+                  info="microblogging!"
+                  color="sapphire"></ListLink>
+
+        <ListLink link="https://www.are.na/hex-4/channels"
+                  title="are.na"
+                  icon="https://icons.hackclub.com/api/icons/0xcba6f7/pin"
+                  info="things I like"
+                  color="mauve"></ListLink>
+        <ListLink link="https://github.com/Hex-4"
+                  title="github"
+                  icon="https://icons.hackclub.com/api/icons/0xb4befe/github"
+                  info="check out my code!"
+                  color="lavender"></ListLink>
+
+
+
+
+
+
     </div>
 
 </Window>
