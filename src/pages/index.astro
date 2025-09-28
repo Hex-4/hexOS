@@ -63,5 +63,19 @@ import Guestbook from "../windows/guestbook.astro";
 </html>
 
 <script>
+    // Get the current URL
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
 
+    // Check if 'open' parameter exists and get its value
+    const openParam = params.get('open'); // returns 'links' for ?open=links
+
+    if (openParam) {
+        // Find the window and open it
+        const windowElement = document.getElementById(openParam);
+        if (windowElement) {
+            document.getElementById("welcome").classList.toggle("closed")
+            windowElement.classList.remove('closed');
+        }
+    }
 </script>
