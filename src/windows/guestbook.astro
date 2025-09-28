@@ -6,69 +6,24 @@ import Use from "../use.astro";
 ---
 
 <Window closed="false"
-        title="what i use"
-        id="uses"
-        icon="https://icons.hackclub.com/api/icons/0xfab387/bolt">
-    <div class=" text-amber-50 font-mono overflow-scroll h-110">
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/settings"
-                 class="size-12 mr-1 mt-0.5 inline">
-            hardware
-        </span>
-
-        <div class="flex flex-col gap-2">
-            <Use title="Desktop PC">custom build</Use>
-            <Use title="[glyph]" link="https://github.com/Hex-4/glyph">custom split keeb</Use>
-            <Use title="Random laptop from my basement">self-hosted server</Use>
-            <Use link=https://rhodiapads.com/collections_spiral_A6.php title="Rhodia dotted spiral pad">"nowbook"</Use>
-            <Use link="https://www.kokuyo.com/en/products/jibun_techo/" title="Kokuyo Jibun Techo">planner</Use>
-            <Use link="https://www.mi.com/global/product/xiaomi-smart-band-7/" title="Mi Band 7">smartwatch</Use>
-        </div>
-
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/community"
-                 class="size-12 mr-1 mt-0.5 inline">
-            general software
-        </span>
-
-        <div class="flex flex-col gap-2">
-            <Use title="Arch Linux" link="https://archlinux.org/">linux distro</Use>
-            <Use title="Niri & friends" link="https://github.com/Hex-4/dotfiles">wm + other stuff</Use>
-            <Use title="Catppuccin" link="https://catppuccin.com">color palette</Use>
-            <Use title="Zen Browser" link="https://zen-browser.app">browser</Use>
-            <Use title="Obsidian" link="https://obsidian.md">notes and stuff</Use>
-            <Use title="Ecosia" link="https://www.ecosia.org/">search engine</Use>
-            <Use title="Are.na" link="https://www.are.na">collecting things</Use>
-
-        </div>
-
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/code"
-                 class="size-12 mr-1 mt-0.5 inline">
-            dev software
-        </span>
-        <div class="flex flex-col gap-2">
-            <Use title="VSCodium" link="https://vscodium.com">main code editor</Use>
-            <Use title="Kitty" link="https://sw.kovidgoyal.net/kitty/">terminal</Use>
-            <Use title="Fish" link="https://fishshell.com/">shell</Use>
-            <Use title="Starship" link="https://starship.rs/">terminal prompt</Use>
-            <Use title="uv" link="https://docs.astral.sh/uv/">python tooling</Use>
-            <Use title="Bun" link="https://bun.sh">js tooling</Use>
-
-        </div>
-
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/rep"
-                 class="size-12 mr-1 mt-0.5 inline">
-            creative software
-        </span>
-        <div class="flex flex-col gap-2">
-            <Use title="Figma" link="https://figma.com">general design</Use>
-            <Use title="Aseprite" link="https://www.aseprite.org/">pixel art</Use>
-            <Use title="Kdenlive" link="https://kdenlive.org/">video editor</Use>
-            <Use title="KiCad" link="https://www.kicad.org/">pcb editor</Use>
-            <Use title="Onshape" link="https://www.onshape.com/en/">cad</Use>
-        </div>
+        title="guestbook (i dont know why text is blurry)"
+        id="guestbook"
+        icon="https://icons.hackclub.com/api/icons/0xfab387/post-fill">
+    <div class="w-160 h-140 overflow-y-scroll">
+        <script src="https://giscus.app/client.js"
+                data-repo="Hex-4/hexOS"
+                data-repo-id="R_kgDOPhjsOA"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOPhjsOM4Cv-u6"
+                data-mapping="title"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="catppuccin_mocha"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+        </script>
     </div>
-
 </Window>

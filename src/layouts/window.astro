@@ -30,72 +30,50 @@ const { id = "welcome", title = "Welcome!", icon = "https://icons.hackclub.com/a
         dragElement(div)
     }
     // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
-    function dragElement(element: Element) {
+    function dragElement(element) {
         // Step 2: Set up variables to keep track of the element's position.
         var initialX = 0;
         var initialY = 0;
         var currentX = 0;
         var currentY = 0;
 
-        let posX = 0, posY = 0;
-
-
-
-
         element.querySelector(".handle")!.addEventListener('mousedown', startDragging);
-
-        element.querySelector(".handle")!.addEventListener("mouseenter", () => {console.log("enter")});
-
-        element.querySelector(".handle")!.addEventListener("mouseleave", () => {console.log("leave")});
-
 
         // Step 6: Define the `startDragging` function to capture the initial mouse position and set up event listeners.
         function startDragging(e) {
             e = e || window.event;
-            element.style.transition = "none";
             e.preventDefault();
+            element.style.transition = "none";
             // Step 7: Get the mouse cursor position at startup.
             initialX = e.clientX;
             initialY = e.clientY;
-
-
             // Step 8: Set up event listeners for mouse movement (`elementDrag`) and mouse button release (`closeDragElement`).
-            document.addEventListener("mouseup", stopDragging);
-            document.addEventListener("mousemove", dragElement);
-
-
+            document.onmouseup = stopDragging;
+            document.onmousemove = dragElement;
         }
 
         // Step 9: Define the `elementDrag` function to calculate the new position of the element based on mouse movement.
         function dragElement(e) {
-            console.log(document.elementFromPoint(e.clientX, e.clientY));
-
             e = e || window.event;
             e.preventDefault();
-            currentX = e.clientX - initialX;
-            currentY = e.clientY - initialY;
-            element.style.transform = `translate(${posX + currentX}px, ${posY + currentY}px)`;
+            // Step 10: Calculate the new cursor position.
+            currentX = initialX - e.clientX;
+            currentY = initialY - e.clientY;
+            initialX = e.clientX;
+            initialY = e.clientY;
+            // Step 11: Update the element's new position by modifying its `top` and `left` CSS properties.
+            element.style.top = (element.offsetTop - currentY) + "px";
+            element.style.left = (element.offsetLeft - currentX) + "px";
         }
 
         // Step 12: Define the `stopDragging` function to stop tracking mouse movement by removing the event listeners.
         function stopDragging() {
+            document.onmouseup = null;
+            document.onmousemove = null;
             element.style.transition = "all 300ms";
-            console.log("stopDragging");
-            document.removeEventListener("mouseup", stopDragging);
-            document.removeEventListener("mousemove", dragElement);
-
-            posX += currentX;
-            posY += currentY;
-
-            const handle = element.querySelector(".handle");
-            if (handle) {
-                // magic
-                handle.style.visibility = 'hidden';
-                handle.offsetHeight;
-                handle.style.visibility = '';
-            }
         }
     }
+
 
     for (const element of document.getElementsByClassName("close")) {
         element.addEventListener("click", () => {

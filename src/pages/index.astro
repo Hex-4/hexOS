@@ -11,6 +11,7 @@ import Links from "../windows/links.astro";
 import Projects from "../windows/projects.astro";
 import Fun from "../windows/fun.astro";
 import Uses from "../windows/uses.astro";
+import Guestbook from "../windows/guestbook.astro";
 ---
 
 <html lang="en" id="root">
@@ -19,7 +20,7 @@ import Uses from "../windows/uses.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>hex4</title>
+		<title>hexOS ~ by hex4</title>
 	</head>
 	<body class="bg-ctp-crust overflow-hidden desktop">
         <img src={Wallpaper.src} class="-z-20 absolute w-screen h-screen object-cover"></img>
@@ -31,6 +32,7 @@ import Uses from "../windows/uses.astro";
         <Projects />
         <Fun></Fun>
         <Uses></Uses>
+        <Guestbook></Guestbook>
 	</body>
 </html>
 
