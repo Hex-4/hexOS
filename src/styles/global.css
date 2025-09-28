@@ -23,7 +23,7 @@
 }
 
 .closed {
-    @apply opacity-0! scale-0! pointer-events-none;
+    @apply md:opacity-0! md:scale-0! md:pointer-events-none;
 }
 
 .asdssds {
@@ -73,3 +73,5 @@ iframe[src*="giscus"] {
 *::-webkit-scrollbar-thumb:active {
     background-color: #FAB387;
 }
+
+

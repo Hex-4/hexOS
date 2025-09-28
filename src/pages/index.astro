@@ -3,6 +3,11 @@ import '../styles/global.css'
 
 import Welcome from "../windows/welcome.astro";
 
+const title = "hex4 - dreamer, maker, coder";
+const description = "creative technologist making (mostly) useless stuff for a funner web & world";
+const ogImage = "/og-image.png"; // path to your image
+const url = "https://hex4.xyz"; // your actual domain
+
 import Wallpaper from "../assets/blob-scene-haikei.png";
 import Bar from "../bar.astro";
 import Launcher from "../launcher.astro";
@@ -17,22 +22,43 @@ import Guestbook from "../windows/guestbook.astro";
 <html lang="en" id="root">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/avatar.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>hexOS ~ by hex4</title>
+        <meta name="description" content={description} />
+
+        <!-- Open Graph (Facebook, Discord, etc.) -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter/X -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+		<title>{title}</title>
 	</head>
-	<body class="bg-ctp-crust overflow-hidden desktop">
-        <img src={Wallpaper.src} class="-z-20 absolute w-screen h-screen object-cover"></img>
+	<body class="bg-ctp-crust overflow-y-scroll md:overflow-hidden desktop">
+        <img src={Wallpaper.src} class="-z-20 absolute w-screen h-screen hidden md:block object-cover"></img>
         <Bar></Bar>
         <Launcher/>
 		<Welcome/>
+        <p class="font-mono text-ctp-subtext0 italic m-4 md:hidden">you're on the mobile site! you can still view all content, but for a super cool OS-like experience, please visit on desktop.</p>
         <About/>
+        <div class="w-full h-1 bg-gradient-to-r from-ctp-red via-ctp-yellow to-ctp-blue md:hidden"></div>
         <Links />
+        <div class="w-full h-1 bg-gradient-to-r from-ctp-red via-ctp-yellow to-ctp-blue md:hidden"></div>
         <Projects />
+        <div class="w-full h-1 bg-gradient-to-r from-ctp-red via-ctp-yellow to-ctp-blue md:hidden"></div>
         <Fun></Fun>
+        <div class="w-full h-1 bg-gradient-to-r from-ctp-red via-ctp-yellow to-ctp-blue md:hidden"></div>
         <Uses></Uses>
+        <div class="w-full h-1 bg-gradient-to-r from-ctp-red via-ctp-yellow to-ctp-blue md:hidden"></div>
         <Guestbook></Guestbook>
+        <div class="w-full h-1 bg-gradient-to-r from-ctp-red via-ctp-yellow to-ctp-blue md:hidden"></div>
 	</body>
 </html>
 

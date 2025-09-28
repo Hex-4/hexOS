@@ -1,12 +1,11 @@
 ---
 import '../styles/global.css'
-import { Debug } from 'astro:components';
 
 const { id = "welcome", title = "Welcome!", icon = "https://icons.hackclub.com/api/icons/0xfab387/welcome", closed = ""} = Astro.props;
 ---
 
-<div class={`w-fit rounded-2xl window absolute translate-x-[calc(48vw-50%)] translate-y-[calc(42vh-50%)] transition-all duration-300 flex flex-row ${closed === "true" ? "closed" : ""}`} id={id}>
-    <div class="handle text-ctp-text bg-ctp-mantle text-center translate-x-10 hover:translate-x-4  font-vt text-xl rounded-l-xl pr-3 transition-all border-ctp-overlay0 hover:border-ctp-peach! border-1 ease-spring duration-400">
+<div class={`translate-0 rounded-2xl w-full md:w-auto window md:absolute static transition-all duration-300 md:translate-x-[calc(48vw-50%)] md:translate-y-[calc(42vh-50%)] md:flex md:flex-row ${closed === "true" ? "closed" : ""}`} id={id}>
+    <div class="handle hidden md:block text-ctp-text bg-ctp-mantle text-center translate-x-10 hover:translate-x-4  font-vt text-xl rounded-l-xl md:pr-3 transition-all border-ctp-overlay0 hover:border-ctp-peach! border-1 ease-spring duration-400">
         <div class="w-min flex flex-col justify-between items-center py-2 px-1 h-full">
             <img src={icon} class="size-6">
 
@@ -16,7 +15,7 @@ const { id = "welcome", title = "Welcome!", icon = "https://icons.hackclub.com/a
         </div>
 
     </div>
-    <div class="z-20 p-5 bg-ctp-base rounded-xl border-ctp-subtext0 border-2">
+    <div class="z-20 p-5 md:bg-ctp-base rounded-xl md:border-ctp-subtext0 md:border-2 w-full md:w-auto">
         <slot />
     </div>
 
