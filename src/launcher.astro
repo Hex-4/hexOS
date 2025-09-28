@@ -39,10 +39,15 @@ import './styles/global.css'
              class="size-24 transition-all duration-500 ease-spring">
         <p class="text-ctp-text text-2xl font-vt">projects</p>
     </div>
-    <div class="flex items-center justify-center flex-col group app">
+    <div class="flex items-center justify-center flex-col group app" id="launch-fun">
         <img src="https://icons.hackclub.com/api/icons/0xfab387/explore"
              class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">fun</p>
+        <p class="text-ctp-text text-2xl font-vt">explore</p>
+    </div>
+    <div class="flex items-center justify-center flex-col group app" id="launch-uses">
+        <img src="https://icons.hackclub.com/api/icons/0xfab387/bolt"
+             class="size-24 transition-all duration-500 ease-spring">
+        <p class="text-ctp-text text-2xl font-vt">what i use</p>
     </div>
 </div>
 
@@ -66,6 +71,10 @@ import './styles/global.css'
                 document.getElementById("links").classList.toggle("closed")
             } else if (event.currentTarget.id == "launch-projects") {
                 document.getElementById("projects").classList.toggle("closed")
+            } else if (event.currentTarget.id == "launch-fun") {
+                document.getElementById("fun").classList.toggle("closed")
+            } else if (event.currentTarget.id == "launch-uses") {
+                document.getElementById("uses").classList.toggle("closed")
             }
         })
     }

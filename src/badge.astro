@@ -1,0 +1,14 @@
+---
+import "./styles/global.css"
+
+const { image, link } = Astro.props;
+---
+{link ? (
+<a href={link}>
+    <img src={`/88x31/${image}`} class="hover:-translate-y-1 transform" />
+</a>
+    ) : (
+<img src={`/88x31/${image}`} />
+    )}
+
+

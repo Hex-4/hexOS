@@ -1,0 +1,14 @@
+---
+import "./styles/global.css"
+
+let {link, title = "GitHub"} = Astro.props
+---
+
+<div class="group ml-13 hover:ml-15 transition-all duration-500 ease-spring">
+    {link ? <a href={link} class="text-xl underline decoration-wavy underline-offset-2 hover:underline-offset-6 font-bold group-hover:text-ctp-peach transition-all duration-500 ease-spring">
+        {title}</a> : <span class="text-xl font-bold group-hover:text-ctp-peach">
+        {title}</span>}
+    <p class="italic  transition-discrete text-ctp-overlay1 transition-all group-hover:text-ctp-text inline">
+        <slot/>
+    </p>
+</div>
