@@ -23,37 +23,42 @@ import './styles/global.css'
 
 </style>
 
-<div class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl pointer-events-none hidden  open:pointer-events-auto md:flex border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 flex-row transition-all duration-800 gap-0" id="launcher" popover>
-    <div class="flex items-center justify-center flex-col group app" id="launch-about">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
-             class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">about me</p>
+<div class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl pointer-events-none hidden md:flex flex-col open:pointer-events-auto border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 transition-all duration-800 gap-0 justify-center place-content-center text-center" id="launcher" popover>
+    <div class="md:flex">
+        <div class="flex items-center justify-center flex-col group app" id="launch-about">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+                 class="size-24 transition-all duration-500 ease-spring">
+            <p class="text-ctp-text text-2xl font-vt">about me</p>
+        </div>
+        <div class="flex items-center justify-center flex-col group app" id="launch-links">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/web"
+                 class="size-24 transition-all duration-500 ease-spring">
+            <p class="text-ctp-text text-2xl font-vt">links</p>
+        </div>
+        <div class="flex items-center justify-center flex-col group app" id="launch-projects">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/idea"
+                 class="size-24 transition-all duration-500 ease-spring">
+            <p class="text-ctp-text text-2xl font-vt">projects</p>
+        </div>
+        <div class="flex items-center justify-center flex-col group app" id="launch-fun">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/explore"
+                 class="size-24 transition-all duration-500 ease-spring">
+            <p class="text-ctp-text text-2xl font-vt">explore</p>
+        </div>
+        <div class="flex items-center justify-center flex-col group app" id="launch-uses">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/bolt"
+                 class="size-24 transition-all duration-500 ease-spring">
+            <p class="text-ctp-text text-2xl font-vt">uses</p>
+        </div>
+        <div class="flex items-center justify-center flex-col group app" id="launch-guestbook">
+            <img src="https://icons.hackclub.com/api/icons/0xfab387/post-fill"
+                 class="size-24 transition-all duration-500 ease-spring">
+            <p class="text-ctp-text text-2xl font-vt">guestbook</p>
+        </div>
     </div>
-    <div class="flex items-center justify-center flex-col group app" id="launch-links">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/web"
-             class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">links</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app" id="launch-projects">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/idea"
-             class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">projects</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app" id="launch-fun">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/explore"
-             class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">explore</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app" id="launch-uses">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/bolt"
-             class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">uses</p>
-    </div>
-    <div class="flex items-center justify-center flex-col group app" id="launch-guestbook">
-        <img src="https://icons.hackclub.com/api/icons/0xfab387/post-fill"
-             class="size-24 transition-all duration-500 ease-spring">
-        <p class="text-ctp-text text-2xl font-vt">guestbook</p>
-    </div>
+
+    <span class="italic text-ctp-subtext0 font-mono mt-3">(click outside to dismiss)</span>
+
 </div>
 
 <script>
