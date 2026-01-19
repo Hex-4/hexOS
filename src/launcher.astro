@@ -1,118 +1,146 @@
 ---
-import './styles/global.css'
+import "./styles/global.css";
 ---
 
 <style>
-    .app:hover img {
-        width: 8rem;
-        height: 8rem;
-    }
+.app:hover img {
+	width: 8rem;
+	height: 8rem;
+}
 
-    .app:has(+ .app:hover) img,
-    .app:hover + .app img {
-        width: 7rem;
-        height: 7rem;
-    }
+.app:has(+ .app:hover) img,
+.app:hover + .app img {
+	width: 7rem;
+	height: 7rem;
+}
 
-    .app:has(+ .app + .app:hover) img,
-    .app:hover + .app + .app img{
-        width: 6rem;
-        height: 6rem;
-    }
-
-
+.app:has(+ .app + .app:hover) img,
+.app:hover + .app + .app img {
+	width: 6rem;
+	height: 6rem;
+}
 </style>
 
-<div class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl pointer-events-none hidden md:flex flex-col open:pointer-events-auto border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 transition-all duration-800 gap-0 justify-center place-content-center text-center" id="launcher" popover>
-    <div class="md:flex">
-        <div class="flex items-center justify-center flex-col group app" id="launch-about">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/sam"
-                 class="size-24 transition-all duration-500 ease-spring">
-            <p class="text-ctp-text text-2xl font-vt">about me</p>
-        </div>
-        <div class="flex items-center justify-center flex-col group app" id="launch-links">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/web"
-                 class="size-24 transition-all duration-500 ease-spring">
-            <p class="text-ctp-text text-2xl font-vt">links</p>
-        </div>
-        <div class="flex items-center justify-center flex-col group app" id="launch-projects">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/idea"
-                 class="size-24 transition-all duration-500 ease-spring">
-            <p class="text-ctp-text text-2xl font-vt">projects</p>
-        </div>
-        <div class="flex items-center justify-center flex-col group app" id="launch-fun">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/explore"
-                 class="size-24 transition-all duration-500 ease-spring">
-            <p class="text-ctp-text text-2xl font-vt">explore</p>
-        </div>
-        <div class="flex items-center justify-center flex-col group app" id="launch-uses">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/bolt"
-                 class="size-24 transition-all duration-500 ease-spring">
-            <p class="text-ctp-text text-2xl font-vt">uses</p>
-        </div>
-        <div class="flex items-center justify-center flex-col group app" id="launch-guestbook">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/post-fill"
-                 class="size-24 transition-all duration-500 ease-spring">
-            <p class="text-ctp-text text-2xl font-vt">guestbook</p>
-        </div>
-    </div>
+<div
+	class="z-200 p-7 bg-ctp-base/20 backdrop-blur-sm rounded-xl pointer-events-none hidden md:flex flex-col open:pointer-events-auto border-ctp-subtext0 border-2 absolute ease-spring before:ease-out transition-discrete open:opacity-100 opacity-0 top-9/16 open:top-1/2 left-1/2 -translate-1/2 transition-all duration-800 gap-0 justify-center place-content-center text-center"
+	id="launcher"
+	popover
+>
+	<div class="md:flex">
+		<div
+			class="flex items-center justify-center flex-col group app"
+			id="launch-about"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/sam"
+				class="size-24 transition-all duration-500 ease-spring"
+			>
+			<p class="text-ctp-text text-2xl font-vt">about me</p>
+		</div>
+		<div
+			class="flex items-center justify-center flex-col group app"
+			id="launch-links"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/web"
+				class="size-24 transition-all duration-500 ease-spring"
+			>
+			<p class="text-ctp-text text-2xl font-vt">links</p>
+		</div>
+		<div
+			class="flex items-center justify-center flex-col group app"
+			id="launch-projects"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/idea"
+				class="size-24 transition-all duration-500 ease-spring"
+			>
+			<p class="text-ctp-text text-2xl font-vt">projects</p>
+		</div>
+		<div
+			class="flex items-center justify-center flex-col group app"
+			id="launch-fun"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/explore"
+				class="size-24 transition-all duration-500 ease-spring"
+			>
+			<p class="text-ctp-text text-2xl font-vt">explore</p>
+		</div>
+		<div
+			class="flex items-center justify-center flex-col group app"
+			id="launch-uses"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/bolt"
+				class="size-24 transition-all duration-500 ease-spring"
+			>
+			<p class="text-ctp-text text-2xl font-vt">uses</p>
+		</div>
+		<div
+			class="flex items-center justify-center flex-col group app"
+			id="launch-guestbook"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/post-fill"
+				class="size-24 transition-all duration-500 ease-spring"
+			>
+			<p class="text-ctp-text text-2xl font-vt">guestbook</p>
+		</div>
+	</div>
 
-    <span class="italic text-ctp-subtext0 font-mono mt-3">(click outside to dismiss)</span>
-
+	<span class="italic text-ctp-subtext0 font-mono mt-3"
+		>(click outside to dismiss)</span
+	>
 </div>
 
 <script>
+import hotkeys from "hotkeys-js";
 
-    import hotkeys from 'hotkeys-js';
+hotkeys("ctrl+space", function (event, handler) {
+	// Prevent the default refresh event under WINDOWS system
+	event.preventDefault();
+	openLauncher();
+});
 
-    hotkeys('ctrl+space', function(event, handler){
-        // Prevent the default refresh event under WINDOWS system
-        event.preventDefault()
-        openLauncher()
-    });
+for (const div of document.getElementsByClassName("app")) {
+	div.addEventListener("click", function (event) {
+		event.preventDefault();
+		if (event.currentTarget.id == "launch-about") {
+			document.getElementById("about").classList.toggle("closed");
+		} else if (event.currentTarget.id == "launch-links") {
+			document.getElementById("links").classList.toggle("closed");
+		} else if (event.currentTarget.id == "launch-projects") {
+			document.getElementById("projects").classList.toggle("closed");
+		} else if (event.currentTarget.id == "launch-fun") {
+			document.getElementById("fun").classList.toggle("closed");
+		} else if (event.currentTarget.id == "launch-uses") {
+			document.getElementById("uses").classList.toggle("closed");
+		} else if (event.currentTarget.id == "launch-guestbook") {
+			document.getElementById("guestbook").classList.toggle("closed");
+		}
+		launcher.hidePopover();
+	});
+}
 
-    for (const div of document.getElementsByClassName("app")) {
-        div.addEventListener("click", function(event){
-            event.preventDefault()
-            if (event.currentTarget.id == "launch-about") {
-                document.getElementById("about").classList.toggle("closed")
-            } else if (event.currentTarget.id == "launch-links") {
-                document.getElementById("links").classList.toggle("closed")
-            } else if (event.currentTarget.id == "launch-projects") {
-                document.getElementById("projects").classList.toggle("closed")
-            } else if (event.currentTarget.id == "launch-fun") {
-                document.getElementById("fun").classList.toggle("closed")
-            } else if (event.currentTarget.id == "launch-uses") {
-                document.getElementById("uses").classList.toggle("closed")
-            } else if (event.currentTarget.id == "launch-guestbook") {
-                document.getElementById("guestbook").classList.toggle("closed")
-            }
-            launcher.hidePopover()
-        })
-    }
+var launcher = document.getElementById("launcher");
 
+launcher.addEventListener("beforetoggle", (e) => {
+	if (e.newState === "closed") {
+		launcher?.classList.replace("ease-spring", "ease-out");
+		launcher?.classList.replace("duration-800", "duration-300");
+	} else {
+		launcher?.classList.replace("ease-out", "ease-spring");
+		launcher?.classList.replace("duration-300", "duration-800");
+	}
+});
 
-    var launcher = document.getElementById('launcher');
+launcher?.addEventListener("openLauncher", () => {
+	console.log("hi");
+	openLauncher();
+});
 
-    launcher.addEventListener("beforetoggle", (e) => {
-        if (e.newState === "closed") {
-            launcher?.classList.replace("ease-spring", "ease-out")
-            launcher?.classList.replace("duration-800", "duration-300")
-        } else {
-            launcher?.classList.replace("ease-out", "ease-spring")
-            launcher?.classList.replace("duration-300", "duration-800")
-        }
-    });
-
-    launcher?.addEventListener("openLauncher", () => {
-        console.log("hi")
-        openLauncher()
-    })
-
-
-
-    function openLauncher() {
-        launcher?.showPopover()
-    }
-
+function openLauncher() {
+	launcher?.showPopover();
+}
 </script>

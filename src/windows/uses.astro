@@ -1,74 +1,108 @@
 ---
-import '../styles/global.css'
-import Window from "../layouts/window.astro";
+import "../styles/global.css";
 import Badge from "../badge.astro";
+import Window from "../layouts/window.astro";
 import Use from "../use.astro";
 ---
 
-<Window closed="true"
-        title="what i use"
-        id="uses"
-        icon="https://icons.hackclub.com/api/icons/0xfab387/bolt">
-    <div class=" text-ctp-text font-mono md:overflow-y-scroll md:h-110">
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/settings"
-                 class="size-12 mr-1 mt-0.5 inline">
-            hardware
-        </span>
+<Window
+	closed="true"
+	title="what i use"
+	id="uses"
+	icon="https://icons.hackclub.com/api/icons/0xfab387/bolt"
+>
+	<div class=" text-ctp-text font-mono md:overflow-y-scroll md:h-110">
+		<span
+			class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/settings"
+				class="size-12 mr-1 mt-0.5 inline"
+			>
+			hardware
+		</span>
 
-        <div class="flex flex-col gap-2">
-            <Use title="Desktop PC">custom build</Use>
-            <Use title="[glyph]" link="https://github.com/Hex-4/glyph">custom split keeb</Use>
-            <Use title="Random laptop from my basement">self-hosted server</Use>
-            <Use link=https://rhodiapads.com/collections_spiral_A6.php title="Rhodia dotted spiral pad">"nowbook"</Use>
-            <Use link="https://www.kokuyo.com/en/products/jibun_techo/" title="Kokuyo Jibun Techo">planner</Use>
-            <Use link="https://www.mi.com/global/product/xiaomi-smart-band-7/" title="Mi Band 7">smartwatch</Use>
-        </div>
+		<div class="flex flex-col gap-2">
+			<Use title="Desktop PC">custom build</Use>
+			<Use title="[glyph]" link="https://github.com/Hex-4/glyph">
+				custom split keeb
+			</Use>
+			<Use title="Random laptop from my basement">self-hosted server</Use>
+			<Use
+				link="https://rhodiapads.com/collections_spiral_A6.php"
+				title="Rhodia dotted spiral pad"
+			>
+				"nowbook"
+			</Use>
+			<Use
+				link="https://www.kokuyo.com/en/products/jibun_techo/"
+				title="Kokuyo Jibun Techo"
+			>
+				planner
+			</Use>
+			<Use
+				link="https://www.mi.com/global/product/xiaomi-smart-band-7/"
+				title="Mi Band 7"
+			>
+				smartwatch
+			</Use>
+		</div>
 
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/community"
-                 class="size-12 mr-1 mt-0.5 inline">
-            general software
-        </span>
+		<span
+			class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/community"
+				class="size-12 mr-1 mt-0.5 inline"
+			>
+			general software
+		</span>
 
-        <div class="flex flex-col gap-2">
-            <Use title="Arch Linux" link="https://archlinux.org/">linux distro</Use>
-            <Use title="Niri & friends" link="https://github.com/Hex-4/dotfiles">wm + other stuff</Use>
-            <Use title="Catppuccin" link="https://catppuccin.com">color palette</Use>
-            <Use title="Zen Browser" link="https://zen-browser.app">browser</Use>
-            <Use title="Obsidian" link="https://obsidian.md">notes and stuff</Use>
-            <Use title="Ecosia" link="https://www.ecosia.org/">search engine</Use>
-            <Use title="Are.na" link="https://www.are.na">collecting things</Use>
+		<div class="flex flex-col gap-2">
+			<Use title="Arch Linux" link="https://archlinux.org/">linux distro</Use>
+			<Use title="Niri & friends" link="https://github.com/Hex-4/dotfiles">
+				wm + other stuff
+			</Use>
+			<Use title="Catppuccin" link="https://catppuccin.com">color palette</Use>
+			<Use title="Zen Browser" link="https://zen-browser.app">browser</Use>
+			<Use title="Obsidian" link="https://obsidian.md">notes and stuff</Use>
+			<Use title="Ecosia" link="https://www.ecosia.org/">search engine</Use>
+			<Use title="Are.na" link="https://www.are.na">collecting things</Use>
+		</div>
 
-        </div>
+		<span
+			class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/code"
+				class="size-12 mr-1 mt-0.5 inline"
+			>
+			dev software
+		</span>
+		<div class="flex flex-col gap-2">
+			<Use title="VSCodium" link="https://vscodium.com">main code editor</Use>
+			<Use title="Kitty" link="https://sw.kovidgoyal.net/kitty/">terminal</Use>
+			<Use title="Fish" link="https://fishshell.com/">shell</Use>
+			<Use title="Starship" link="https://starship.rs/">terminal prompt</Use>
+			<Use title="uv" link="https://docs.astral.sh/uv/">python tooling</Use>
+			<Use title="Bun" link="https://bun.sh">js tooling</Use>
+		</div>
 
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/code"
-                 class="size-12 mr-1 mt-0.5 inline">
-            dev software
-        </span>
-        <div class="flex flex-col gap-2">
-            <Use title="VSCodium" link="https://vscodium.com">main code editor</Use>
-            <Use title="Kitty" link="https://sw.kovidgoyal.net/kitty/">terminal</Use>
-            <Use title="Fish" link="https://fishshell.com/">shell</Use>
-            <Use title="Starship" link="https://starship.rs/">terminal prompt</Use>
-            <Use title="uv" link="https://docs.astral.sh/uv/">python tooling</Use>
-            <Use title="Bun" link="https://bun.sh">js tooling</Use>
-
-        </div>
-
-        <span class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl">
-            <img src="https://icons.hackclub.com/api/icons/0xfab387/rep"
-                 class="size-12 mr-1 mt-0.5 inline">
-            creative software
-        </span>
-        <div class="flex flex-col gap-2">
-            <Use title="Figma" link="https://figma.com">general design</Use>
-            <Use title="Aseprite" link="https://www.aseprite.org/">pixel art</Use>
-            <Use title="Kdenlive" link="https://kdenlive.org/">video editor</Use>
-            <Use title="KiCad" link="https://www.kicad.org/">pcb editor</Use>
-            <Use title="Onshape" link="https://www.onshape.com/en/">cad</Use>
-        </div>
-    </div>
-
+		<span
+			class="flex align-middle items-center text-ctp-peach font-bold font-vt text-3xl"
+		>
+			<img
+				src="https://icons.hackclub.com/api/icons/0xfab387/rep"
+				class="size-12 mr-1 mt-0.5 inline"
+			>
+			creative software
+		</span>
+		<div class="flex flex-col gap-2">
+			<Use title="Figma" link="https://figma.com">general design</Use>
+			<Use title="Aseprite" link="https://www.aseprite.org/">pixel art</Use>
+			<Use title="Kdenlive" link="https://kdenlive.org/">video editor</Use>
+			<Use title="KiCad" link="https://www.kicad.org/">pcb editor</Use>
+			<Use title="Onshape" link="https://www.onshape.com/en/">cad</Use>
+		</div>
+	</div>
 </Window>

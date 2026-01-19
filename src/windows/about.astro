@@ -1,15 +1,35 @@
 ---
-import '../styles/global.css'
-import Window from "../layouts/window.astro";
+import "../styles/global.css";
 
 import { Image } from "astro:assets";
-import hex4Logo from "../assets/hex4.png"
+import hex4Logo from "../assets/hex4.png";
+import Window from "../layouts/window.astro";
 ---
 
 <Window closed="true" title="about" id="about"  icon="https://icons.hackclub.com/api/icons/0xfab387/sam">
     <div class="text-ctp-text font-mono md:h-150 w-full md:overflow-y-scroll">
-        <p class="font-serif text-4xl italic mb-0">hi! i'm <span class="text-ctp-peach">hex4</span>.</p>
+        <p class="font-serif text-4xl italic mb-0">heyo!</p>
         <p class="text-lg text-ctp-text whitespace-pre-line text-wrap! md:w-180">
+        i'm Neven, though in most corners of the internet I go by the pseudonym <span class="italic font-bold text-ctp-peach">hex4</span>. i'm a polymath creative, hacker, maker, designer, and do-er that coincidentally is also a middle schooler. i build scripts, websites, tiny tools, games, not-tiny tools, and worlds with a huge (too huge?) variety of tools & techniques.
+
+
+                </p>
+
+        <p class="text-lg text-ctp-text whitespace-pre-line text-wrap! md:w-180 mt-4">
+        computers are cool! for me, they're my favourite form of self-expression - i can type in a bunch of words, symbols, and numbers, and get out something that <span class="italic">does things</span> more reliably and precisely than any human ever could. i started coding when i was 8 (ish?) and have been loving it ever since. it's so special to be able to understand, tweak, break, and fix this dumb (?) pieces of fancy sand that run our world - i have a strong belief that we should try our best to understand and own the things that run on our devices.
+
+        i also really like design, as is (hopefully) evident with this site! i really think that putting a little more thought into a design and a touch of animation and micro-interactions can really make software a joy to use. (full blog post on why juice isn't just for games coming soon!) lifeless, cold software - usually using Radix UI, the Inter font, and a monochrome palette - kinda hurts to see and i'm trying my best to remedy that :)
+
+        i do gamedev too! my go-to engine is Godot, but i'm a fan of pico-8 as well. i've taken place in the GMTK Game Jam since 2023, and have made a bunch of (abandoned) side projects, like <a href="https://dimaverse.itch.io/countless" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-yellow">Countless</a>. (which made it to a full demo somehow!) i realllly like gamedev since it incorporates so many different things - programming, optimization, art, writing, level design, game design, and, if you really try, science and acting. the fact that all my friends like games is a plus too haha
+
+        right now, I have skills with html/css/js, astro + tailwind, svelte, godot, lua,  and python, though I can handle new things pretty easily. i'm currently trying to learn C, Ruby, React and Rust! hardware is fun too - i've made a <a href="https://github.com/Hex-4/hexapad" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-lavender">macropad</a> and <a href="https://github.com/Hex-4/glyph" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-peach">custom keyboard</a> from scratch that I daily drive.
+
+        when i'm not rotting away in my chair, i game, read, write, pat my cats, draw pixel (and regular) art, rock climb, play D&D, shock myself playing with breadboards, listen to music, bullet-journal, and snowboard.
+
+
+
+            but like... why the hack am i making all this (mostly 💀) useless stuff? well.
+
             i think the internet isn't as fun as it should be.
 
             there's so much creativity and soul out there. but these days, it's all stuck on a few boring websites, forced to mold to those businesses' growth goals. it wasn't always like this.
@@ -20,30 +40,6 @@ import hex4Logo from "../assets/hex4.png"
 
             a world of dreamers.</span>
 
-
-        </p>
-
-        <p class="text-lg text-ctp-text whitespace-pre-line text-wrap! md:w-180 mt-4">
-            computers are cool! for me, they're my favourite form of self-expression - i can type in a bunch of words, symbols, and numbers, and get out something that <span class="italic">does things</span>. i started coding when i was 8 (ish?) and have been loving it ever since.
-
-            i also really like design, as is (hopefully) evident with this site! i really think that putting a little more thought into a design and a touch of animation and micro-interactions can really make software a joy to use (full blog post on Why You Should Juice Up Your Website coming soon!)
-
-            i do gamedev too! my go-to engine is Godot, but i'm a fan of pico-8 as well. i've taken place in the GMTK Game Jam since 2023, and have made a bunch of (abandoned) side projects, like <a href="https://dimaverse.itch.io/countless" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-yellow">Countless</a> (which made it to a full demo somehow!)
-
-            right now, I have skills with html/css/js, astro + tailwind, svelte, godot, and python, though I can handle new things pretty easily. hardware is fun too - i've made a <a href="https://github.com/Hex-4/hexapad" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-lavender">macropad</a> and <a href="https://github.com/Hex-4/glyph" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-peach">custom keyboard</a> from scratch that I daily drive.
-
-            when i'm not rotting away in my chair, i can be found gaming (find me on the hack club mc server!), read, write, pat my cats, draw pixel (and regular) art, rock climb, and snowboard.
-
-            i'm on the newspaper team @ <a href="https://hackclub.com" class="underline decoration-wavy underline-offset-2 hover:underline-offset-6 transition-all ease-spring duration-500 hover:font-bold hover:text-ctp-red">hack club</a>, helping keep 1k+ young hackers informed about what's going on in the community. you can usually find me chatting in the Slack as @hex4 - feel free to reach out!
-
-            above all though, i'm a dreamer.
-
-            i dream about a world where <span class="italic font-bold text-ctp-peach">people build things because they can</span>, a world that's <span class="italic font-bold text-ctp-peach">more joyful than ever</span>, a world where people find solace in  <span class="italic font-bold text-ctp-peach">creating with friends.
-
-            a world for the dreamers.</span>
-
-
-        </p>
         <Image src={hex4Logo} alt="hex4" class="h-40 w-min object-contain mt-4 md:mb-14"/>
     </div>
 

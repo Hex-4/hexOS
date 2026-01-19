@@ -1,10 +1,11 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 
 import Welcome from "../windows/welcome.astro";
 
 const title = "hex4 - dreamer, maker, coder";
-const description = "creative technologist making (mostly) useless stuff for a funner web & world";
+const description =
+	"creative technologist making (mostly) useless stuff for a funner web & world";
 const ogImage = "/og-image.png"; // path to your image
 const url = "https://hex4.xyz"; // your actual domain
 
@@ -12,33 +13,33 @@ import Wallpaper from "../assets/blob-scene-haikei.png";
 import Bar from "../bar.astro";
 import Launcher from "../launcher.astro";
 import About from "../windows/about.astro";
+import Fun from "../windows/fun.astro";
+import Guestbook from "../windows/guestbook.astro";
 import Links from "../windows/links.astro";
 import Projects from "../windows/projects.astro";
-import Fun from "../windows/fun.astro";
 import Uses from "../windows/uses.astro";
-import Guestbook from "../windows/guestbook.astro";
 ---
 
 <html lang="en" id="root" class="mocha">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/avatar.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-        <meta name="description" content={description} />
+		<meta charset="utf-8">
+		<link rel="icon" type="image/svg+xml" href="/avatar.png">
+		<meta name="viewport" content="width=device-width">
+		<meta name="generator" content={Astro.generator}>
+		<meta name="description" content={description}>
 
-        <!-- Open Graph (Facebook, Discord, etc.) -->
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="website" />
+		<!-- Open Graph (Facebook, Discord, etc.) -->
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content={ogImage}>
+		<meta property="og:url" content={url}>
+		<meta property="og:type" content="website">
 
-        <!-- Twitter/X -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+		<!-- Twitter/X -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
+		<meta name="twitter:image" content={ogImage}>
 		<title>{title}</title>
 	</head>
 	<body class="bg-ctp-crust overflow-y-scroll md:overflow-hidden desktop">
@@ -63,19 +64,19 @@ import Guestbook from "../windows/guestbook.astro";
 </html>
 
 <script>
-    // Get the current URL
-    const url = new URL(window.location.href);
-    const params = new URLSearchParams(url.search);
+// Get the current URL
+const url = new URL(window.location.href);
+const params = new URLSearchParams(url.search);
 
-    // Check if 'open' parameter exists and get its value
-    const openParam = params.get('open'); // returns 'links' for ?open=links
+// Check if 'open' parameter exists and get its value
+const openParam = params.get("open"); // returns 'links' for ?open=links
 
-    if (openParam) {
-        // Find the window and open it
-        const windowElement = document.getElementById(openParam);
-        if (windowElement) {
-            document.getElementById("welcome").classList.toggle("closed")
-            windowElement.classList.remove('closed');
-        }
-    }
+if (openParam) {
+	// Find the window and open it
+	const windowElement = document.getElementById(openParam);
+	if (windowElement) {
+		document.getElementById("welcome").classList.toggle("closed");
+		windowElement.classList.remove("closed");
+	}
+}
 </script>

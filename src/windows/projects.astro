@@ -1,88 +1,105 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 import Window from "../layouts/window.astro";
 import Project from "../project.astro";
 ---
 
-<Window closed="true"
-        title="projects"
-        id="projects"
-        icon="https://icons.hackclub.com/api/icons/0xfab387/idea">
-    <div class=" text-center text-ctp-text font-mono flex flex-col gap-3 md:overflow-y-scroll md:w-180 md:h-120">
-        <Project
-        link="https://hex4.xyz"
-        title="this website!"
-        status="shipped"
-        source="https://github.com/Hex-4/hexOS"
-        >
-            this is the very website you're on right now! it was built with my usual stack: astro and tailwind. you can open and close windows (the launcher just toggles the closed class on windows) and i've used a springy ease everywhere which feels really nice.
-        </Project>
-        <Project
-                link="https://modulo-app.pages.dev/"
-                title="modulo"
-                status="shipped"
-                source="https://github.com/Hex-4/modulo"
-        >
-            a little webapp to put time in perspective. set a time period and interval, and see how much time is left visually. set colors + notes on dots, save them, and theme the interface! made with svelte.
-        </Project>
-        <Project
-                link="https://dimaverse.itch.io/circuits"
-                title="CIRCUITS"
-                status="frozen"
-                source="https://github.com/Hex-4/circuits"
-        >
-            DON'T CLOSE THE LOOP. blast enemies, use pickups, and don't get short circuited in this Godot shmup with a unique damage mechanic, made in 96hr for the GMTK Game Jam 2025.
-        </Project>
-        <Project
-                link="https://github.com/Hex-4/undernet"
-                title="UNDERNET"
-                status="frozen"
-                source="https://github.com/Hex-4/undernet"
-        >
-            Hackers at <a class="text-ctp-text hover:font-bold hover:text-ctp-mauve underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6" href="https://undercity.hackclub.com">Undercity</a> had a chance to participate in Undernet, a midnight ARG organized by me and <a class="text-ctp-text hover:font-bold hover:text-ctp-yellow underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6" href=" https://github.com/jeninh.">Jenin.</a> Hackers worked through 6 stages (4.5 of which were working) to reconstruct Orpheus' memories and save the Undernet.
-        </Project>
-        <Project
-                link="https://github.com/Hex-4/sprog"
-                title="sprog"
-                status="dev"
-                source="https://github.com/Hex-4/sprog"
-        >
-            advanced, optimized firmware for the Hack Club Sprig. build games, toys, and more with a friendly API in CircuitPython. in collaboration with <a class="text-ctp-text hover:font-bold hover:text-ctp-blue underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6" href="https://lucas11.dev">Lucas11!</a>
-        </Project>
-        <Project
-                link="https://chat.reverie.wtf"
-                title="reverie"
-                status="dev"
-                source=""
-        >
-            reverie is a community of people who'd rather create than consume & want to work on their own ideas. we're artists, writers, filmmakers, engineers, and hackers. we make real things for real people. we support each other. we have fun.
-            <br>
-            <br>
-            we are dreamers. join us.
-        </Project>
-        <Project
-                link=""
-                title="Campsite"
-                status="draft"
-                source=""
-        >
-            The cozy community you control.
-        </Project>
+<Window
+	closed="true"
+	title="projects"
+	id="projects"
+	icon="https://icons.hackclub.com/api/icons/0xfab387/idea"
+>
+	<div
+		class=" text-center text-ctp-text font-mono flex flex-col gap-3 md:overflow-y-scroll md:w-180 md:h-120"
+	>
+		<Project
+			link="https://hex4.xyz"
+			title="this website!"
+			status="shipped"
+			source="https://github.com/Hex-4/hexOS"
+		>
+			this is the very website you're on right now! it was built with my usual
+			stack: astro and tailwind. you can open and close windows (the launcher
+			just toggles the closed class on windows) and i've used a springy ease
+			everywhere which feels really nice.
+		</Project>
+		<Project
+			link="https://modulo-app.pages.dev/"
+			title="modulo"
+			status="shipped"
+			source="https://github.com/Hex-4/modulo"
+		>
+			a little webapp to put time in perspective. set a time period and
+			interval, and see how much time is left visually. set colors + notes on
+			dots, save them, and theme the interface! made with svelte.
+		</Project>
+		<Project
+			link="https://dimaverse.itch.io/circuits"
+			title="CIRCUITS"
+			status="frozen"
+			source="https://github.com/Hex-4/circuits"
+		>
+			DON'T CLOSE THE LOOP. blast enemies, use pickups, and don't get short
+			circuited in this Godot shmup with a unique damage mechanic, made in 96hr
+			for the GMTK Game Jam 2025.
+		</Project>
+		<Project
+			link="https://github.com/Hex-4/undernet"
+			title="UNDERNET"
+			status="frozen"
+			source="https://github.com/Hex-4/undernet"
+		>
+			Hackers at
+			<a
+				class="text-ctp-text hover:font-bold hover:text-ctp-mauve underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6"
+				href="https://undercity.hackclub.com"
+				>Undercity</a
+			>
+			had a chance to participate in Undernet, a midnight ARG organized by me
+			and
+			<a
+				class="text-ctp-text hover:font-bold hover:text-ctp-yellow underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6"
+				href=" https://github.com/jeninh."
+				>Jenin.</a
+			>
+			Hackers worked through 6 stages (4.5 of which were working) to reconstruct
+			Orpheus' memories and save the Undernet.
+		</Project>
+		<Project
+			link="https://github.com/Hex-4/sprog"
+			title="sprog"
+			status="dev"
+			source="https://github.com/Hex-4/sprog"
+		>
+			advanced, optimized firmware for the Hack Club Sprig. build games, toys,
+			and more with a friendly API in CircuitPython. in collaboration with
+			<a
+				class="text-ctp-text hover:font-bold hover:text-ctp-blue underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6"
+				href="https://lucas11.dev"
+				>Lucas11!</a
+			>
+		</Project>
+		<Project
+			link="https://chat.reverie.wtf"
+			title="reverie"
+			status="dev"
+			source=""
+		>
+			reverie is a community of people who'd rather create than consume & want
+			to work on their own ideas. we're artists, writers, filmmakers, engineers,
+			and hackers. we make real things for real people. we support each other.
+			we have fun.
+			<br>
+			<br>
+			we are dreamers. join us.
+		</Project>
+		<Project link="" title="Campsite" status="draft" source="">
+			The cozy community you control.
+		</Project>
 
-        <Project
-                link=""
-                title="tokoro"
-                status="draft"
-                source=""
-        >
-            Playful tools for a more productive and mindful life.
-        </Project>
-
-
-
-
-
-
-    </div>
-
+		<Project link="" title="tokoro" status="draft" source="">
+			Playful tools for a more productive and mindful life.
+		</Project>
+	</div>
 </Window>

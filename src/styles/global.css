@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Silkscreen:wght@400;700&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Silkscreen:wght@400;700&family=VT323&display=swap");
 
 @import "tailwindcss";
 
@@ -7,8 +7,8 @@
 @source inline("{group-hover:,}text-ctp-{sapphire,lavender,red,mauve,green,lime,yellow,old,purple}");
 
 .text-vertical {
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
 }
 
 @theme {
@@ -19,59 +19,57 @@
 }
 
 .ease-spring {
-    @apply ease-[linear(0,0.039_2%,0.155_4.2%,0.986_15.2%,1.133_18.6%,1.201_22%,1.193_26.8%,1.011_38.4%,0.959_45.4%,1.008_68.6%,1)];
+	@apply ease-[linear(0,0.039_2%,0.155_4.2%,0.986_15.2%,1.133_18.6%,1.201_22%,1.193_26.8%,1.011_38.4%,0.959_45.4%,1.008_68.6%,1)];
 }
 
 .closed {
-    @apply md:opacity-0! md:scale-0! md:pointer-events-none;
+	@apply md:opacity-0! md:scale-0! md:pointer-events-none;
 }
 
 .asdssds {
-    @apply text-ctp-sapphire;
+	@apply text-ctp-sapphire;
 }
 
 iframe[src*="giscus"] {
-    -moz-osx-font-smoothing: grayscale;
-    image-rendering: -moz-crisp-edges;
-    transform: translateZ(0);
-    will-change: transform;
+	-moz-osx-font-smoothing: grayscale;
+	image-rendering: -moz-crisp-edges;
+	transform: translateZ(0);
+	will-change: transform;
 }
 
 .window {
-    transform: none !important;
-    filter: none !important;
-    image-rendering: auto;
+	transform: none !important;
+	filter: none !important;
+	image-rendering: auto;
 }
 
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
+	height: 8px;
+	width: 8px;
 }
 *::-webkit-scrollbar-track {
-    border-radius: 17px;
-    background-color: #45475A;
+	border-radius: 17px;
+	background-color: #45475a;
 }
 
 *::-webkit-scrollbar-track:hover {
-    background-color: #45475A;
+	background-color: #45475a;
 }
 
 *::-webkit-scrollbar-track:active {
-    background-color: #45475A;
+	background-color: #45475a;
 }
 
 *::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #FAB387;
+	border-radius: 5px;
+	background-color: #fab387;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #FAB387;
+	background-color: #fab387;
 }
 
 *::-webkit-scrollbar-thumb:active {
-    background-color: #FAB387;
+	background-color: #fab387;
 }
-
-

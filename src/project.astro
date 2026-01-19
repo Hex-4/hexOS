@@ -1,48 +1,52 @@
 ---
-import "./styles/global.css"
+import "./styles/global.css";
 
-let {link = "https://hack.club", title = "Hack Club", status = "shipped", source} = Astro.props;
+const {
+	link = "https://hack.club",
+	title = "Hack Club",
+	status = "shipped",
+	source,
+} = Astro.props;
 ---
-<div class="group bg-ctp-surface0 rounded-lg p-4 transition-all ease-spring duration-500 justify-start text-left md:hover:-translate-y-2 shadow-lg hover:shadow-2xl">
 
-    <div class="flex flex-row items-center group">
-        <a href={link}
-           class="text-3xl font-vt underline decoration-wavy transition-all ease-spring underline-offset-2 hover:underline-offset-6  hover:text-ctp-peach duration-500">{title}</a>
-        {status === "shipped" &&
+<div
+	class="group bg-ctp-surface0 rounded-lg p-4 transition-all ease-spring duration-500 justify-start text-left md:hover:-translate-y-2 shadow-lg hover:shadow-2xl"
+>
+	<div class="flex flex-row items-center group">
+		<a
+			href={link}
+			class="text-3xl font-vt underline decoration-wavy transition-all ease-spring underline-offset-2 hover:underline-offset-6  hover:text-ctp-peach duration-500"
+			>{title}</a
+		>
+		{status === "shipped" &&
                 <div class="ml-auto py-1 px-2 rounded-full bg-ctp-green text-ctp-base font-bold text-sm flex items-center align-middle gap-0.5">
                     <img src=https://icons.hackclub.com/api/icons/0x303446/bolt
                          class="size-6 transition-all ease-spring duration-500 inline">
                     <span class="text-ctp-base font-bold text-sm">shipped</span>
-                </div>
-        }
-        {status === "frozen" &&
+                </div>}
+		{status === "frozen" &&
                 <div class="ml-auto py-1 px-2 rounded-full bg-ctp-sapphire text-ctp-base font-bold text-sm flex items-center align-middle gap-0.5">
                     <img src=https://icons.hackclub.com/api/icons/0x303446/freeze
                          class="size-6 transition-all ease-spring duration-500 inline">
                     <span class="text-ctp-base font-bold text-sm">frozen</span>
-                </div>
-        }
-        {status === "dev" &&
+                </div>}
+		{status === "dev" &&
                 <div class="ml-auto py-1 px-2 rounded-full border-dotted border-2 border-ctp-overlay0 text-ctp-base font-bold text-sm flex items-center align-middle gap-0.5">
                     <img src=https://icons.hackclub.com/api/icons/0xc6d0f5/code
                          class="size-6 transition-all ease-spring duration-500 inline">
                     <span class="text-ctp-text font-bold text-sm">in dev</span>
-                </div>
-        }
-        {status === "draft" &&
+                </div>}
+		{status === "draft" &&
                 <div class="ml-auto py-1 px-2 rounded-full border-dotted border-2 border-ctp-overlay0 text-ctp-base font-bold text-sm flex items-center align-middle gap-0.5">
                     <img src=https://icons.hackclub.com/api/icons/0xc6d0f5/plus
                          class="size-6 transition-all ease-spring duration-500 inline">
                     <span class="text-ctp-text font-bold text-sm">draft</span>
-                </div>
-        }
+                </div>}
+	</div>
 
-    </div>
-
-    <p class="text-ctp-text mt-2">
-        <slot/>
-        {source &&
-        <a class="text-ctp-subtext0 underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6" href={source}>open source.</a>
-        }
-    </p>
+	<p class="text-ctp-text mt-2">
+		<slot />
+		{source &&
+        <a class="text-ctp-subtext0 underline decoration-wavy transition-all underline-offset-2 hover:underline-offset-6" href={source}>open source.</a>}
+	</p>
 </div>
